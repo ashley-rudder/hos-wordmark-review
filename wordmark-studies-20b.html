@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOS Wordmark · Twenty More · Set 02 · Sable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Bagel+Fat+One&family=Big+Shoulders+Display:wght@400;500;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,600;12..96,700;12..96,800&family=Cinzel:wght@400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Faustina:ital,wght@0,300..800;1,300..800&family=Fjalla+One&family=Forum&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Major+Mono+Display&family=Marcellus&family=Marcellus+SC&family=Modak&family=Oswald:wght@200..700&family=Rozha+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ultra&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F3EDD8;
+    --bg-deep: #ECE3CA;
+    --surface: #EEE6CC;
+    --rule: #D8CFB3;
+    --ink: #202221;
+    --ink-soft: #4A4A48;
+    --ink-muted: #7A7872;
+    --band: #1A1B1A;
+    --band-text: #E8DFC4;
+    --accent: #C2410C;
+    --ui-sans: 'Bricolage Grotesque', 'Inter', -apple-system, sans-serif;
+    --marquee: 'Big Shoulders Display', sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  ::selection { background: var(--ink); color: var(--bg); }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--ui-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none;
+    background-image:
+      radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(20,15,10,0.06) 100%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.50 0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.22 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: auto, 240px 240px;
+    mix-blend-mode: multiply; opacity: 0.45; z-index: 1;
+  }
+
+  /* ============================================ */
+  /* HEADER */
+  /* ============================================ */
+  .study-header {
+    padding: 100px 80px 56px;
+    border-bottom: 1px solid var(--rule);
+    position: relative; z-index: 2;
+  }
+  .study-header .label {
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .study-header h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    margin-bottom: 28px;
+    max-width: 1180px;
+  }
+  .study-header p {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 780px;
+  }
+  .study-header .meta {
+    margin-top: 36px;
+    display: flex; gap: 40px; flex-wrap: wrap;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .study-header .meta span strong {
+    color: var(--ink); font-weight: 700;
+  }
+
+  /* ============================================ */
+  /* GRID OF 20 */
+  /* ============================================ */
+  .wm-grid {
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--rule);
+  }
+  .wm-card {
+    padding: 56px 56px 48px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+    display: flex; flex-direction: column;
+    min-height: 380px;
+    position: relative;
+  }
+  .wm-card:nth-child(2n) { border-right: none; }
+  .wm-card.dark {
+    background: var(--band);
+    color: var(--band-text);
+    border-right-color: var(--band);
+    border-bottom-color: var(--band);
+  }
+
+  .wm-card .meta-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 24px;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .wm-card.dark .meta-row { color: rgba(232,223,196,0.6); }
+  .wm-card .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--accent);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+  .wm-card .font-name {
+    text-align: right;
+  }
+  .wm-card .font-name strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .wm-card.dark .font-name strong { color: var(--band-text); }
+
+  /* CIRCUMFLEX CONTAINMENT FIX */
+  /* Generous top padding ensures the circumflex (which sits above the cap-height) */
+  /* always has visible room to live inside the wordmark frame */
+  .wm-card .wordmark-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 0 32px;
+    margin: 16px 0;
+    min-height: 160px;
+  }
+
+  .wm-card .dna {
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+  .wm-card.dark .dna {
+    color: rgba(232,223,196,0.75);
+    border-top-color: rgba(232,223,196,0.2);
+  }
+
+  /* ============================================ */
+  /* SHARED WORDMARK CONSTRUCTION */
+  /* ============================================ */
+  .wm {
+    display: inline-flex;
+    align-items: baseline;
+    line-height: 0.9;
+    white-space: nowrap;
+  }
+  .wm .ocirc {
+    position: relative;
+    display: inline-block;
+  }
+  .wm .ocirc .circ {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0.46em;
+    height: 0.17em;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  .wm .ocirc .circ svg { width: 100%; height: 100%; display: block; overflow: visible; }
+  .wm .of {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    text-transform: lowercase;
+    font-size: 0.62em;
+    transform: translateY(-0.04em);
+    display: inline-block;
+    margin: 0 0.12em;
+  }
+
+  /* PER-VARIANT STYLES — SET 02 */
+
+  /* 21. Cinzel — Trajan classical inscription */
+  .wm-21 { font-family: 'Cinzel', serif; font-weight: 700; font-size: clamp(36px, 4.6vw, 84px); letter-spacing: 0.03em; text-transform: uppercase; gap: 0.22em; }
+  .wm-21 .ocirc .circ { margin-bottom: 0.06em; width: 0.5em; }
+
+  /* 22. Marcellus — refined classical Roman */
+  .wm-22 { font-family: 'Marcellus', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 96px); letter-spacing: 0.015em; text-transform: uppercase; gap: 0.2em; }
+  .wm-22 .ocirc .circ { margin-bottom: 0.06em; width: 0.5em; }
+
+  /* 23. Marcellus SC — small caps Roman */
+  .wm-23 { font-family: 'Marcellus SC', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 96px); letter-spacing: 0.02em; text-transform: uppercase; gap: 0.2em; }
+  .wm-23 .ocirc .circ { margin-bottom: 0.06em; width: 0.5em; }
+
+  /* 24. Forum — uppercase Roman titling */
+  .wm-24 { font-family: 'Forum', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.03em; text-transform: uppercase; gap: 0.22em; }
+  .wm-24 .ocirc .circ { margin-bottom: 0.06em; width: 0.5em; }
+
+  /* 25. Rozha One — display serif with personality */
+  .wm-25 { font-family: 'Rozha One', serif; font-weight: 400; font-size: clamp(40px, 5.2vw, 96px); letter-spacing: -0.01em; text-transform: uppercase; gap: 0.12em; }
+  .wm-25 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 26. Ultra — old-style fat display */
+  .wm-26 { font-family: 'Ultra', serif; font-weight: 400; font-size: clamp(36px, 4.6vw, 86px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.12em; }
+  .wm-26 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 27. Bagel Fat One — extra heavy display */
+  .wm-27 { font-family: 'Bagel Fat One', sans-serif; font-weight: 400; font-size: clamp(40px, 5.2vw, 96px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.1em; }
+  .wm-27 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 28. Modak — playful heavy display */
+  .wm-28 { font-family: 'Modak', sans-serif; font-weight: 400; font-size: clamp(40px, 5.2vw, 96px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.08em; }
+  .wm-28 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 29. Source Serif 4 — Adobe modern editorial */
+  .wm-29 { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.16em; font-variation-settings: "opsz" 60; }
+  .wm-29 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 30. Crimson Pro — Garalde editorial */
+  .wm-30 { font-family: 'Crimson Pro', serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.18em; }
+  .wm-30 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 31. Faustina — modern serif */
+  .wm-31 { font-family: 'Faustina', serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.16em; }
+  .wm-31 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 32. Jost — Futura geometric DNA */
+  .wm-32 { font-family: 'Jost', sans-serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.14em; }
+  .wm-32 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 33. Space Grotesk — quirky tech-modern */
+  .wm-33 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.02em; text-transform: uppercase; gap: 0.1em; }
+  .wm-33 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 34. Albert Sans — refined modern sans */
+  .wm-34 { font-family: 'Albert Sans', sans-serif; font-weight: 800; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.035em; text-transform: uppercase; gap: 0.08em; }
+  .wm-34 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 35. Hanken Grotesk — neo-grotesque */
+  .wm-35 { font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.035em; text-transform: uppercase; gap: 0.08em; }
+  .wm-35 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 36. Oswald — editorial condensed */
+  .wm-36 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: clamp(56px, 7.4vw, 144px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.1em; }
+  .wm-36 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 37. Fjalla One — modern condensed */
+  .wm-37 { font-family: 'Fjalla One', sans-serif; font-weight: 400; font-size: clamp(48px, 6.4vw, 124px); letter-spacing: 0; text-transform: uppercase; gap: 0.1em; }
+  .wm-37 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 38. JetBrains Mono — code mono (CDOS coherent) */
+  .wm-38 { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: clamp(32px, 4vw, 72px); letter-spacing: -0.04em; text-transform: uppercase; gap: 0.05em; }
+  .wm-38 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 39. Major Mono Display — display mono */
+  .wm-39 { font-family: 'Major Mono Display', monospace; font-weight: 400; font-size: clamp(32px, 4.2vw, 76px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.05em; }
+  .wm-39 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 40. Space Mono — quirky mono */
+  .wm-40 { font-family: 'Space Mono', monospace; font-weight: 700; font-size: clamp(28px, 3.8vw, 68px); letter-spacing: -0.04em; text-transform: uppercase; gap: 0.04em; }
+  .wm-40 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* ============================================ */
+  /* FOOTER */
+  /* ============================================ */
+  .study-footer {
+    padding: 100px 80px;
+    text-align: center;
+    position: relative; z-index: 2;
+    border-top: 1px solid var(--rule);
+  }
+  .study-footer .label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .study-footer h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(28px, 3.4vw, 48px);
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+  .study-footer .signature {
+    margin-top: 40px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-muted);
+  }
+
+  /* SET NAV */
+  .set-nav {
+    position: relative; z-index: 3;
+    display: flex;
+    gap: 0;
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 80px;
+  }
+  .set-nav a {
+    padding: 18px 28px 16px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border-right: 1px solid var(--rule);
+    transition: color 0.3s var(--ease), background 0.3s var(--ease);
+  }
+  .set-nav a:first-child { border-left: 1px solid var(--rule); }
+  .set-nav a:hover { color: var(--ink); background: var(--bg); }
+  .set-nav a.active {
+    color: var(--ink);
+    background: var(--bg);
+    font-weight: 700;
+  }
+  .set-nav a .num {
+    color: var(--accent);
+    margin-right: 8px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  @media (max-width: 880px) {
+    .set-nav { padding: 0 24px; flex-wrap: wrap; }
+    .set-nav a { padding: 14px 16px; }
+    .study-header { padding: 60px 24px 40px; }
+    .wm-grid { grid-template-columns: 1fr; }
+    .wm-card { padding: 40px 24px; border-right: none; }
+    .study-footer { padding: 60px 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- SET NAV (across all three pages) -->
+  <!-- ============================================ -->
+  <nav class="set-nav">
+    <a href="./wordmark-studies-20.html"><span class="num">Set 01</span> Foundations</a>
+    <a href="./wordmark-studies-20b.html" class="active"><span class="num">Set 02</span> Classical &amp; Mono</a>
+    <a href="./wordmark-studies-20c.html"><span class="num">Set 03</span> Magazine Editorial</a>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HEADER -->
+  <!-- ============================================ -->
+  <header class="study-header">
+    <div class="label">Wordmark Studies · Set 02 · Twenty More Directions</div>
+    <h1>Twenty more proposals. No overlap. Circumflex in frame.</h1>
+    <p>Set 02 explores territory the first round didn't touch — classical Roman inscription (Cinzel, Marcellus, Forum), display serifs with personality (Rozha, Ultra, Modak, Bagel Fat One), modern grotesques (Jost, Space Grotesk, Hanken), condensed editorial (Oswald, Fjalla), and a full monospace family for the operator-engineer territory (JetBrains, Major Mono, Space Mono). Same custom Ô across all twenty. Walk the room.</p>
+    <div class="meta">
+      <span><strong>20</strong> · New typefaces</span>
+      <span><strong>40</strong> · Total options across sets</span>
+      <span><strong>1</strong> · Becomes the mark</span>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- 20-CARD GRID -->
+  <!-- ============================================ -->
+  <div class="wm-grid">
+
+    <!-- 21 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">21</span>
+        <span class="font-name"><strong>Cinzel</strong>Trajan Classical · Inscriptional</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-21"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Trajan column inscription DNA. Lapidary, monumental, classical Roman. Reads as a building's name carved in stone above the door.</div>
+    </div>
+
+    <!-- 22 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">22</span>
+        <span class="font-name"><strong>Marcellus</strong>Classical Roman · Refined Heritage</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-22"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Refined classical Roman serif with gentle ball terminals. Quieter than Cinzel, more handwritten. Editorial heritage with warmth.</div>
+    </div>
+
+    <!-- 23 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">23</span>
+        <span class="font-name"><strong>Marcellus SC</strong>Small Caps Roman · Refined Society</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-23"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Small caps variant. Reads as a private members club wordmark. Soho House energy without the obvious Soho House reference.</div>
+    </div>
+
+    <!-- 24 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">24</span>
+        <span class="font-name"><strong>Forum</strong>Uppercase Roman Titling · Civic</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-24"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Roman titling caps. Civic monumental. Sits between Cinzel (Trajan) and Marcellus (refined). Most architectural Roman of the three.</div>
+    </div>
+
+    <!-- 25 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">25</span>
+        <span class="font-name"><strong>Rozha One</strong>Display Serif · Personality Heavy</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-25"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Display serif with strong vertical stress and Devanagari-influenced terminals. Personality on every letter. Most unusual serif of the set.</div>
+    </div>
+
+    <!-- 26 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">26</span>
+        <span class="font-name"><strong>Ultra</strong>Old-Style Fat Display · 1900s Press</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-26"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3.4" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Old-style fat serif, 1900s woodblock press energy. Reads as a Brooklyn letterpress shop reissue. Most American-heritage.</div>
+    </div>
+
+    <!-- 27 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">27</span>
+        <span class="font-name"><strong>Bagel Fat One</strong>Extra Heavy Display · Loud</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-27"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3.6" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Extreme heavy display. Maximalist confidence. The opposite of restrained. Reads as a brand that owns its volume.</div>
+    </div>
+
+    <!-- 28 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">28</span>
+        <span class="font-name"><strong>Modak</strong>Playful Fat Display · Confident Warmth</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-28"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3.4" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Playful heavy display with rounded terminals. More warmth than Bagel Fat. Reads as a contemporary creative house with sense of humor.</div>
+    </div>
+
+    <!-- 29 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">29</span>
+        <span class="font-name"><strong>Source Serif 4</strong>Adobe Modern Editorial · Refined</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-29"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Adobe's modern editorial serif. Optimized for display at scale. Reads as a contemporary publication's masthead.</div>
+    </div>
+
+    <!-- 30 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">30</span>
+        <span class="font-name"><strong>Crimson Pro</strong>Garalde Editorial · Quiet Confidence</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-30"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Garalde editorial serif. Refined book-publishing roots. Quieter than the displays, more confident than the heritage Romans.</div>
+    </div>
+
+    <!-- 31 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">31</span>
+        <span class="font-name"><strong>Faustina</strong>Modern Serif · Magazine Body</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-31"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Contemporary serif optimized for magazine-grade reading. Calmer than Source Serif. Reads as a thoughtful editorial brand.</div>
+    </div>
+
+    <!-- 32 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">32</span>
+        <span class="font-name"><strong>Jost</strong>Futura DNA · Geometric Bauhaus</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-32"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Futura-influenced geometric sans. Bauhaus inheritance. Disciplined, neutral, intentional. The Vignelli choice.</div>
+    </div>
+
+    <!-- 33 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">33</span>
+        <span class="font-name"><strong>Space Grotesk</strong>Quirky Tech-Modern · Studio</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-33"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Modern grotesque with personality on the joins. Reads as a contemporary design studio with engineering rigor.</div>
+    </div>
+
+    <!-- 34 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">34</span>
+        <span class="font-name"><strong>Albert Sans</strong>Refined Modern Sans · Designer Default</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-34"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Refined modern sans. Inter-coherent but warmer. Designer-defaultable. Reads as a contemporary design-led brand.</div>
+    </div>
+
+    <!-- 35 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">35</span>
+        <span class="font-name"><strong>Hanken Grotesk</strong>Neo-Grotesque · Editorial Sans</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-35"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Neo-grotesque sans. Refined functional. Reads as an editorial publication's sans-serif counterpart. Quiet, professional.</div>
+    </div>
+
+    <!-- 36 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">36</span>
+        <span class="font-name"><strong>Oswald</strong>Editorial Condensed · Display</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-36"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Editorial condensed sans. Different DNA from Antonio (set 01) — sharper terminals, more vertical. The classic editorial condensed.</div>
+    </div>
+
+    <!-- 37 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">37</span>
+        <span class="font-name"><strong>Fjalla One</strong>Modern Condensed · Headline</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-37"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Modern condensed sans with humanist edges. Softer than Oswald, more contemporary. Reads as a 2020s editorial brand.</div>
+    </div>
+
+    <!-- 38 -->
+    <div class="wm-card dark">
+      <div class="meta-row">
+        <span class="num" style="color: #FFA862;">38</span>
+        <span class="font-name"><strong style="color: var(--band-text);">JetBrains Mono</strong>Code Mono · CDOS Coherent</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-38" style="color: var(--band-text);"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Code-grade monospace. Direct continuity with CDOS visual system (which already uses JetBrains Mono). Operator-engineer territory.</div>
+    </div>
+
+    <!-- 39 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">39</span>
+        <span class="font-name"><strong>Major Mono Display</strong>Display Mono · Architectural</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-39"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Display-scale monospace with architectural proportions. Drafting-board energy. Reads as a precision studio that measures.</div>
+    </div>
+
+    <!-- 40 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">40</span>
+        <span class="font-name"><strong>Space Mono</strong>Quirky Mono · Studio Default</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-40"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Quirky monospace. Personality on the lowercase. Reads as an independent design studio's lowercase blog header.</div>
+    </div>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="study-footer">
+    <div class="label">Set 02 · Twenty More · Forty Total Across Both Sets</div>
+    <h3>Tell me which numbers across both sets to shortlist. I'll pull the top three to five, scale them to hero, and we narrow from there to the mark.</h3>
+    <div class="signature">— Sable</div>
+  </footer>
+
+</body>
+</html>

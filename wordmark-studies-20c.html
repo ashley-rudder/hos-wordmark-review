@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOS Wordmark · Twenty More · Set 03 · Magazine Editorial · Sable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Adamina&family=Allura&family=Big+Shoulders+Display:wght@400;500;700;800;900&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,600;12..96,700;12..96,800&family=Cardo:ital,wght@0,400;0,700;1,400&family=Della+Respira&family=Domine:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=GFS+Didot&family=Holtwood+One+SC&family=IM+Fell+DW+Pica:ital@0;1&family=Italianno&family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Lustria&family=Petit+Formal+Script&family=Prata&family=Sail&family=Sorts+Mill+Goudy:ital@0;1&family=Tenor+Sans&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vesper+Libre:wght@400;500;700;900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F3EDD8;
+    --bg-deep: #ECE3CA;
+    --surface: #EEE6CC;
+    --rule: #D8CFB3;
+    --ink: #202221;
+    --ink-soft: #4A4A48;
+    --ink-muted: #7A7872;
+    --band: #1A1B1A;
+    --band-text: #E8DFC4;
+    --accent: #C2410C;
+    --ui-sans: 'Bricolage Grotesque', 'Inter', -apple-system, sans-serif;
+    --marquee: 'Big Shoulders Display', sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  ::selection { background: var(--ink); color: var(--bg); }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--ui-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none;
+    background-image:
+      radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(20,15,10,0.06) 100%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.50 0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.22 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: auto, 240px 240px;
+    mix-blend-mode: multiply; opacity: 0.45; z-index: 1;
+  }
+
+  /* ============================================ */
+  /* SET NAV */
+  /* ============================================ */
+  .set-nav {
+    position: relative; z-index: 3;
+    display: flex;
+    gap: 0;
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 80px;
+  }
+  .set-nav a {
+    padding: 18px 28px 16px;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    border-right: 1px solid var(--rule);
+    transition: color 0.3s var(--ease), background 0.3s var(--ease);
+  }
+  .set-nav a:first-child { border-left: 1px solid var(--rule); }
+  .set-nav a:hover { color: var(--ink); background: var(--bg); }
+  .set-nav a.active {
+    color: var(--ink);
+    background: var(--bg);
+    font-weight: 700;
+  }
+  .set-nav a .num {
+    color: var(--accent);
+    margin-right: 8px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* ============================================ */
+  /* HEADER */
+  /* ============================================ */
+  .study-header {
+    padding: 80px 80px 56px;
+    border-bottom: 1px solid var(--rule);
+    position: relative; z-index: 2;
+  }
+  .study-header .label {
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .study-header h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+    margin-bottom: 28px;
+    max-width: 1180px;
+  }
+  .study-header p {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 800px;
+  }
+  .study-header .meta {
+    margin-top: 36px;
+    display: flex; gap: 40px; flex-wrap: wrap;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .study-header .meta span strong {
+    color: var(--ink); font-weight: 700;
+  }
+
+  /* ============================================ */
+  /* GRID OF 20 */
+  /* ============================================ */
+  .wm-grid {
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--rule);
+  }
+  .wm-card {
+    padding: 56px 56px 48px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+    display: flex; flex-direction: column;
+    min-height: 380px;
+    position: relative;
+  }
+  .wm-card:nth-child(2n) { border-right: none; }
+  .wm-card.dark {
+    background: var(--band);
+    color: var(--band-text);
+    border-right-color: var(--band);
+    border-bottom-color: var(--band);
+  }
+
+  .wm-card .meta-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 24px;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .wm-card.dark .meta-row { color: rgba(232,223,196,0.6); }
+  .wm-card .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--accent);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+  .wm-card .font-name {
+    text-align: right;
+  }
+  .wm-card .font-name strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .wm-card.dark .font-name strong { color: var(--band-text); }
+
+  /* CIRCUMFLEX CONTAINMENT FIX */
+  .wm-card .wordmark-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 0 32px;
+    margin: 16px 0;
+    min-height: 160px;
+  }
+
+  .wm-card .dna {
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+  .wm-card.dark .dna {
+    color: rgba(232,223,196,0.75);
+    border-top-color: rgba(232,223,196,0.2);
+  }
+
+  /* ============================================ */
+  /* SHARED WORDMARK CONSTRUCTION */
+  /* ============================================ */
+  .wm {
+    display: inline-flex;
+    align-items: baseline;
+    line-height: 0.9;
+    white-space: nowrap;
+  }
+  .wm .ocirc {
+    position: relative;
+    display: inline-block;
+  }
+  .wm .ocirc .circ {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 0.46em;
+    height: 0.17em;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  .wm .ocirc .circ svg { width: 100%; height: 100%; display: block; overflow: visible; }
+  .wm .of {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    text-transform: lowercase;
+    font-size: 0.62em;
+    transform: translateY(-0.04em);
+    display: inline-block;
+    margin: 0 0.12em;
+  }
+
+  /* PER-VARIANT STYLES — SET 03 · MAGAZINE EDITORIAL */
+
+  /* 41. GFS Didot — pure Vogue/Bazaar Didone */
+  .wm-41 { font-family: 'GFS Didot', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.02em; text-transform: uppercase; gap: 0.2em; }
+  .wm-41 .ocirc .circ { margin-bottom: 0.04em; width: 0.5em; }
+
+  /* 42. Prata — refined Didone */
+  .wm-42 { font-family: 'Prata', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.015em; text-transform: uppercase; gap: 0.18em; }
+  .wm-42 .ocirc .circ { margin-bottom: 0.04em; width: 0.5em; }
+
+  /* 43. Lustria — refined display serif */
+  .wm-43 { font-family: 'Lustria', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.16em; }
+  .wm-43 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 44. Della Respira — heavy heritage Didone (Toiletpaper energy) */
+  .wm-44 { font-family: 'Della Respira', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.14em; }
+  .wm-44 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 45. Cardo — classical book serif (Kinfolk body energy) */
+  .wm-45 { font-family: 'Cardo', serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.18em; }
+  .wm-45 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 46. Sorts Mill Goudy — Goudy classical heritage */
+  .wm-46 { font-family: 'Sorts Mill Goudy', serif; font-weight: 400; font-size: clamp(44px, 5.6vw, 108px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.18em; }
+  .wm-46 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 47. Adamina — refined Garamond */
+  .wm-47 { font-family: 'Adamina', serif; font-weight: 400; font-size: clamp(44px, 5.6vw, 108px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.18em; }
+  .wm-47 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 48. Vesper Libre — refined display heritage */
+  .wm-48 { font-family: 'Vesper Libre', serif; font-weight: 700; font-size: clamp(38px, 5vw, 92px); letter-spacing: 0; text-transform: uppercase; gap: 0.16em; }
+  .wm-48 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 49. Lora — modern Garalde (Monocle body energy) — italic for The Gentlewoman feel */
+  .wm-49 { font-family: 'Lora', serif; font-style: italic; font-weight: 500; font-size: clamp(48px, 6.4vw, 116px); letter-spacing: -0.005em; gap: 0.16em; }
+  .wm-49 .ocirc .circ { margin-bottom: 0.02em; left: 56%; width: 0.4em; }
+
+  /* 50. Volkhov — refined transitional italic (T Magazine) */
+  .wm-50 { font-family: 'Volkhov', serif; font-style: italic; font-weight: 700; font-size: clamp(44px, 5.8vw, 108px); letter-spacing: -0.005em; gap: 0.16em; }
+  .wm-50 .ocirc .circ { margin-bottom: 0.04em; left: 56%; width: 0.4em; }
+
+  /* 51. Domine — modern serif */
+  .wm-51 { font-family: 'Domine', serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 96px); letter-spacing: -0.005em; text-transform: uppercase; gap: 0.14em; }
+  .wm-51 .ocirc .circ { margin-bottom: 0.06em; }
+
+  /* 52. Tinos — calm transitional (Times-coherent) */
+  .wm-52 { font-family: 'Tinos', serif; font-weight: 700; font-size: clamp(44px, 5.8vw, 108px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.16em; }
+  .wm-52 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 53. Petit Formal Script — engraved invitation */
+  .wm-53 { font-family: 'Petit Formal Script', cursive; font-weight: 400; font-size: clamp(48px, 6.4vw, 116px); letter-spacing: 0; gap: 0.12em; }
+  .wm-53 .ocirc .circ { margin-bottom: 0.02em; left: 56%; width: 0.42em; }
+
+  /* 54. Italianno — calligraphic script */
+  .wm-54 { font-family: 'Italianno', cursive; font-weight: 400; font-size: clamp(60px, 8vw, 152px); letter-spacing: 0; gap: 0.1em; }
+  .wm-54 .ocirc .circ { margin-bottom: 0.0em; left: 60%; width: 0.34em; }
+
+  /* 55. Sail — calligraphic */
+  .wm-55 { font-family: 'Sail', cursive; font-weight: 400; font-size: clamp(48px, 6.4vw, 116px); letter-spacing: 0; gap: 0.12em; }
+  .wm-55 .ocirc .circ { margin-bottom: 0.02em; left: 56%; width: 0.4em; }
+
+  /* 56. Allura — refined script */
+  .wm-56 { font-family: 'Allura', cursive; font-weight: 400; font-size: clamp(60px, 8vw, 152px); letter-spacing: 0; gap: 0.1em; }
+  .wm-56 .ocirc .circ { margin-bottom: 0.0em; left: 58%; width: 0.36em; }
+
+  /* 57. Tenor Sans — refined editorial sans (Wallpaper) */
+  .wm-57 { font-family: 'Tenor Sans', sans-serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.02em; text-transform: uppercase; gap: 0.22em; }
+  .wm-57 .ocirc .circ { margin-bottom: 0.06em; width: 0.5em; }
+
+  /* 58. Karla — utility refined sans (Monocle body) */
+  .wm-58 { font-family: 'Karla', sans-serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: -0.02em; text-transform: uppercase; gap: 0.1em; }
+  .wm-58 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 59. IM Fell DW Pica — historical letterpress (Cabana, McSweeney's) */
+  .wm-59 { font-family: 'IM Fell DW Pica', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.18em; }
+  .wm-59 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* 60. Holtwood One SC — slab small caps */
+  .wm-60 { font-family: 'Holtwood One SC', serif; font-weight: 400; font-size: clamp(40px, 5.4vw, 100px); letter-spacing: 0.005em; text-transform: uppercase; gap: 0.18em; }
+  .wm-60 .ocirc .circ { margin-bottom: 0.04em; }
+
+  /* ============================================ */
+  /* FOOTER */
+  /* ============================================ */
+  .study-footer {
+    padding: 100px 80px;
+    text-align: center;
+    position: relative; z-index: 2;
+    border-top: 1px solid var(--rule);
+  }
+  .study-footer .label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .study-footer h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(28px, 3.4vw, 48px);
+    line-height: 1.2;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+  .study-footer .signature {
+    margin-top: 40px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-muted);
+  }
+
+  @media (max-width: 880px) {
+    .set-nav { padding: 0 24px; flex-wrap: wrap; }
+    .set-nav a { padding: 14px 16px; }
+    .study-header { padding: 60px 24px 40px; }
+    .wm-grid { grid-template-columns: 1fr; }
+    .wm-card { padding: 40px 24px; border-right: none; }
+    .study-footer { padding: 60px 24px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- SET NAV (across all three pages) -->
+  <!-- ============================================ -->
+  <nav class="set-nav">
+    <a href="./wordmark-studies-20.html"><span class="num">Set 01</span> Foundations</a>
+    <a href="./wordmark-studies-20b.html"><span class="num">Set 02</span> Classical &amp; Mono</a>
+    <a href="./wordmark-studies-20c.html" class="active"><span class="num">Set 03</span> Magazine Editorial</a>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HEADER -->
+  <!-- ============================================ -->
+  <header class="study-header">
+    <div class="label">Wordmark Studies · Set 03 · Magazine Editorial</div>
+    <h1>Twenty more proposals. The masthead room.</h1>
+    <p>Set 03 lives inside the magazine itself — Vogue masthead Didone, The Gentlewoman italic, Cabana ornament, Toiletpaper display weight, Kinfolk classical, Monocle utility sans, T Magazine modern serif, McSweeney's letterpress. The territory where HAUS OF SÔS is a publication first and a creative house second. Same custom Ô across all twenty.</p>
+    <div class="meta">
+      <span><strong>20</strong> · Magazine-editorial typefaces</span>
+      <span><strong>60</strong> · Total options across three sets</span>
+      <span><strong>1</strong> · Becomes the mark</span>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- 20-CARD GRID -->
+  <!-- ============================================ -->
+  <div class="wm-grid">
+
+    <!-- 41 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">41</span>
+        <span class="font-name"><strong>GFS Didot</strong>Greek Didone · Vogue Masthead</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-41"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Pure Vogue/Bazaar Didone DNA. Extreme thin-thick contrast. The most fashion-magazine masthead of all sixty options.</div>
+    </div>
+
+    <!-- 42 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">42</span>
+        <span class="font-name"><strong>Prata</strong>Refined Didone · European Editorial</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-42"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.8" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">European Didone with slightly warmer terminals than GFS Didot. Reads as Italian Vogue's editorial body face elevated to masthead.</div>
+    </div>
+
+    <!-- 43 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">43</span>
+        <span class="font-name"><strong>Lustria</strong>Refined Display Serif · Sunday Edition</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-43"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Display serif with the warmth of a Sunday newspaper magazine insert. Reads as a New York Times Magazine cover.</div>
+    </div>
+
+    <!-- 44 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">44</span>
+        <span class="font-name"><strong>Della Respira</strong>Heavy Display Didone · Toiletpaper</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-44"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3.2" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Heavy heritage display serif. Toiletpaper magazine confidence. Loud without being decorative. Reads as a press that ships limited editions.</div>
+    </div>
+
+    <!-- 45 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">45</span>
+        <span class="font-name"><strong>Cardo</strong>Classical Book Serif · Kinfolk</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-45"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.8" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Classical book serif. The body face of Kinfolk and Cereal elevated to wordmark scale. Most slow-publishing, most Scandinavian-quiet.</div>
+    </div>
+
+    <!-- 46 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">46</span>
+        <span class="font-name"><strong>Sorts Mill Goudy</strong>Goudy Classical · Heritage Press</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-46"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Frederic Goudy DNA. American letterpress heritage. The mark of an independent press with a back catalog.</div>
+    </div>
+
+    <!-- 47 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">47</span>
+        <span class="font-name"><strong>Adamina</strong>Refined Garamond · Boutique Imprint</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-47"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Refined Garamond variant. Quieter than Cardo, more contemporary than EB Garamond. Boutique imprint energy.</div>
+    </div>
+
+    <!-- 48 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">48</span>
+        <span class="font-name"><strong>Vesper Libre</strong>Display Heritage · Architectural</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-48"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Display heritage serif with architectural proportions. Wider than most. Reads as a Wallpaper* feature title elevated to a masthead.</div>
+    </div>
+
+    <!-- 49 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">49</span>
+        <span class="font-name"><strong>Lora Italic</strong>Modern Garalde · The Gentlewoman</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-49"><span>Haus&nbsp;of&nbsp;S</span><span class="ocirc">o<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>s</span></div>
+      </div>
+      <div class="dna">Italic Garalde at masthead scale. The Gentlewoman energy. Reads as a women-led publication with intelligence and restraint.</div>
+    </div>
+
+    <!-- 50 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">50</span>
+        <span class="font-name"><strong>Volkhov Italic</strong>T Magazine · Refined Transitional</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-50"><span>Haus&nbsp;of&nbsp;S</span><span class="ocirc">o<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>s</span></div>
+      </div>
+      <div class="dna">Italic transitional serif. T Magazine cover-line energy. More architectural than Lora, more contemporary than Cormorant.</div>
+    </div>
+
+    <!-- 51 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">51</span>
+        <span class="font-name"><strong>Domine</strong>Modern Serif · Editorial Body Elevated</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-51"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Contemporary serif optimized for body reading, scaled to masthead. Reads as a modern editorial brand that respects its readers.</div>
+    </div>
+
+    <!-- 52 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">52</span>
+        <span class="font-name"><strong>Tinos</strong>Transitional · Newspaper Editorial</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-52"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.8" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Times-coherent transitional serif. Newspaper-of-record heritage. Most American-broadsheet editorial.</div>
+    </div>
+
+    <!-- 53 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">53</span>
+        <span class="font-name"><strong>Petit Formal Script</strong>Engraved Invitation · Atelier</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-53"><span>Haus&nbsp;of&nbsp;S</span><span class="ocirc">o<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>s</span></div>
+      </div>
+      <div class="dna">Formal engraved script. Reads as a Carlyle Hotel invitation card. Most ceremonial of the sixty. For brands that arrive by handwritten note.</div>
+    </div>
+
+    <!-- 54 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">54</span>
+        <span class="font-name"><strong>Italianno</strong>Calligraphic Script · Hand-Signed</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-54"><span>Haus&nbsp;of&nbsp;S</span><span class="ocirc">o<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="2.4" fill="none" stroke-linecap="square"/></svg></span></span><span>s</span></div>
+      </div>
+      <div class="dna">Italian calligraphic script. The hand of a maker signing their work. Most personal, most artisanal, most signature.</div>
+    </div>
+
+    <!-- 55 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">55</span>
+        <span class="font-name"><strong>Sail</strong>Calligraphic Display · Editorial Cover</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-55"><span>Haus&nbsp;of&nbsp;S</span><span class="ocirc">o<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>s</span></div>
+      </div>
+      <div class="dna">Calligraphic display with confidence. Less ornate than Italianno, more confident than Petit Formal. Editorial cover-line energy.</div>
+    </div>
+
+    <!-- 56 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">56</span>
+        <span class="font-name"><strong>Allura</strong>Refined Script · The Gentlewoman Card</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-56"><span>Haus&nbsp;of&nbsp;S</span><span class="ocirc">o<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="2.4" fill="none" stroke-linecap="square"/></svg></span></span><span>s</span></div>
+      </div>
+      <div class="dna">Refined script. Sits between Italianno and Sail. Most balanced calligraphic option. Reads as a contemporary atelier with classical roots.</div>
+    </div>
+
+    <!-- 57 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">57</span>
+        <span class="font-name"><strong>Tenor Sans</strong>Refined Editorial Sans · Wallpaper*</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-57"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.8" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Refined editorial sans with classical proportions. Wallpaper* masthead energy. Quieter than the heavy sans of set 01.</div>
+    </div>
+
+    <!-- 58 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">58</span>
+        <span class="font-name"><strong>Karla</strong>Editorial Utility Sans · Monocle Body</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-58"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Utility refined sans. Monocle body face elevated. Reads as a publication that values intelligence over noise.</div>
+    </div>
+
+    <!-- 59 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">59</span>
+        <span class="font-name"><strong>IM Fell DW Pica</strong>Historical Letterpress · Cabana</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-59"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#202221" stroke-width="2.6" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Historical letterpress revival. Cabana / McSweeney's energy. Reads as a publication printed on linen with hand-cut blocks.</div>
+    </div>
+
+    <!-- 60 -->
+    <div class="wm-card">
+      <div class="meta-row">
+        <span class="num">60</span>
+        <span class="font-name"><strong>Holtwood One SC</strong>Slab Small Caps · Wallpaper Vintage</span>
+      </div>
+      <div class="wordmark-wrap">
+        <div class="wm wm-60"><span>HAUS&nbsp;OF&nbsp;S</span><span class="ocirc">O<span class="circ"><svg viewBox="0 0 50 18" preserveAspectRatio="xMidYMax meet"><polyline points="4,16 25,2 46,16" stroke="#C2410C" stroke-width="3" fill="none" stroke-linecap="square"/></svg></span></span><span>S</span></div>
+      </div>
+      <div class="dna">Slab serif in small caps only. Vintage wallpaper magazine cover-line energy. Reads as a publication with material weight.</div>
+    </div>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="study-footer">
+    <div class="label">Set 03 · Magazine Editorial · Sixty Total Across Three Sets</div>
+    <h3>For Captain Jack &amp; Coco: walk all three rooms (Set 01, 02, 03), then send Sable the numbers you want to advance.</h3>
+    <div class="signature">— Sable</div>
+  </footer>
+
+</body>
+</html>
